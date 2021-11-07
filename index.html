@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies | Website</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+  <!-- Start Search Section -->
+  <section class="search">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="fullSearch" placeholder="get movies by word...">
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="limitedSearch" placeholder="search...">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Search Section -->
+
+  <!-- Start Side Nav -->
+  <section>
+    <div class="nav-header">
+      <div class="logo">
+        <img src="images/logo.png" alt="">
+      </div>
+      <div class="toggle-menu">
+        <i class="fas fa-align-justify fa-lg"></i>
+      </div>
+      <div class="social-icons">
+        <div class="lang">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="share">
+          <i class="fas fa-share-alt"></i>
+        </div>
+      </div>
+    </div>
+  
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#" data-target="movie/now_playing">Now Playing</a></li>
+        <li><a href="#" data-target="movie/popular">Popular</a></li>
+        <li><a href="#" data-target="movie/top_rated">Top Rated</a></li>
+        <li><a href="#" data-target="trending/all/week">Trending</a></li>
+        <li><a href="#" data-target="movie/upcoming">Upcoming</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+  
+      <div class="social-item">
+        <div class="social-container">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fas fa-globe"></i></a>
+        </div>
+        <div class="pt-3">
+          <span>Copyright Â© 2019 All Rights Reserved.</span>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- End Side Nav -->
+  
+  <!-- Start Main Movies Section -->
+  <section class="movies">
+    <div class="container">
+      <div class="row" id="rowData">
+
+      </div>
+    </div>
+  </section>
+  <!-- End Main Movies Section -->
+
+  <!-- Start Pagination Section -->
+  <div class="container mt-5">
+    <div class="pagination">
+      <ul></ul>
+    </div>
+  </div>
+  <!-- End Pagination Section -->
+
+  <!-- Start Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="text-light pb-4">Contact Us...</h2>
+  
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6 mb-4">
+            <input type="text" class="form-control" placeholder="Enter Your Name" id="username">
+            <div id="username" class="invalid-feedback ms-2">
+              ProductName cannot be blank.
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <input type="text" class="form-control" placeholder="Enter Email" id="userEmail">
+            <div id="userEmail" class="invalid-feedback ms-2">
+              ProductName cannot be blank.
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <input type="text" class="form-control" placeholder="Enter Phone" id="userNumber">
+            <div id="userNumber" class="invalid-feedback ms-2">
+              ProductName cannot be blank.
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <input type="text" class="form-control" placeholder="Enter Age" id="userAge">
+            <div id="userAge" class="invalid-feedback ms-2">
+              ProductName cannot be blank.
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <input type="text" class="form-control" placeholder="Enter Password" id="userPassword">
+            <div id="userPassword" class="invalid-feedback ms-2">
+              ProductName cannot be blank.
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <input type="text" class="form-control" placeholder="Enter RePassword" id="userRePassword">
+            <div id="userRePassword" class="invalid-feedback ms-2">
+              ProductName cannot be blank.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-outline-danger px-4 py-2" id="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

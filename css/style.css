@@ -1,0 +1,293 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  background-color: #0d0d0d;
+  /* font-family: 'Lato', sans-serif; */
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Start Search Section */
+.search {
+  margin: 80px 0;
+}
+/* End Search Section */
+
+/* Start side Nav Section */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  transition: all 0.6s ease;
+  transform: translateX(-100%);
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+  overflow: hidden;
+}
+
+nav ul li {
+  padding-top: 25px;
+  opacity: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f9f6f6;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+nav ul li:hover a {
+  color: #ff655c;
+  transition: all 0.3s;
+}
+
+.social-item {
+  margin: 25px 0;
+}
+
+.social-item a {
+  margin: 0 15px;
+  color: #f9f6f6;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.social-item a:hover {
+  color: #ff655c;
+}
+.social-item span {
+  color: #999;
+  font-size: 12px;
+}
+
+@keyframes navLinkSliding {
+  from {
+    opacity: 0;
+    transform: translateY(270px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Nav header */
+.nav-header {
+  position: fixed;
+  background-color: #f8f6f6;
+  color: #0d0d0d;
+  top: 0;
+  width: 60px;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  left: 0;
+  transition: all 0.6s ease;
+}
+
+.navHeader-active {
+  left: 240px;
+}
+
+.nav-header .logo {
+  padding: 25px 0;
+  cursor: pointer;
+}
+
+.nav-header .logo img {
+  height: 48px;
+}
+
+.nav-header .social-icons {
+  padding: 25px 0;
+}
+.nav-header .social-icons .lang {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.nav-header .toggle-menu,
+.nav-header .social-icons .share {
+  cursor: pointer;
+}
+/* Nav header */
+/* End side Nav Section */
+
+/* Start Main Movies Section */
+.movies .img-container {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.movies .overlay {
+  background-color: rgba(255,255,255,.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: all 1s;
+}
+
+.movies .img-container:hover .overlay {
+  height: 100%;
+}
+
+.movies .overlay .info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.movies .overlay .info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.movies .overlay .info .rating,
+.movies .overlay .info .date {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+/* End Main Movies Section */
+
+/* Start Pagination Section */
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #20B2AA; */
+  padding: 10px;
+}
+
+.pagination ul{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background: #fff; */
+  padding: 8px;
+  border-radius: 50px;
+}
+
+.pagination ul li{
+  color: #dc3545;
+  list-style: none;
+  line-height: 45px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.pagination ul li.numb{
+  list-style: none;
+  height: 45px;
+  width: 45px;
+  margin: 0 3px;
+  line-height: 45px;
+  /* border-radius: 15%; */
+}
+.pagination ul li.numb.first{
+  margin: 0px 3px 0 -5px;
+}
+.pagination ul li.numb.last{
+  margin: 0px -5px 0 3px;
+}
+.pagination ul li.dots{
+  font-size: 22px;
+  line-height: 31px;
+  cursor: default;
+}
+.pagination ul li.btn{
+  padding: 0 20px;
+  border-radius: 50px;
+}
+
+.pagination li.active{
+  color: #fff;
+  background: #dc3545;
+}
+
+.pagination ul li.numb:hover,
+.pagination ul li:first-child:hover,
+.pagination ul li:last-child:hover{
+  color: #f9f6f6;
+}
+/* End Pagination Section */
+
+/* Start Contact Section */
+.contact {
+  margin: 50px 0;
+}
+/* End Contact Section */
+
+input {
+  outline: none !important;
+  background-color: transparent !important;
+  border: unset !important;
+  border-bottom: 1px solid #fff !important;
+  border-radius: 0px !important;
+  color: #fff !important;
+}
+
+.form-control:focus {
+  box-shadow: unset;
+}
+
+/* Start Media Query */
+@media (max-width: 767.98px) {
+  section {
+    padding-left: 62px;
+  }
+  input[placeholder='get movies by word...'] {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 90% !important;
+  }
+  section {
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1115px) {
+  section {
+    padding-left: 60px;
+  }
+}
+/* End Media Query */
